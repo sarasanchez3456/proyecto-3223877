@@ -1,0 +1,1 @@
+function handleError(error){console.error("API Error:",error.message);}async function fetchData(url){try{const res=await fetch(url);if(!res.ok)throw new Error("HTTP error! status: "+res.status);return await res.json();}catch(error){handleError(error);}}module.exports={fetchData};
